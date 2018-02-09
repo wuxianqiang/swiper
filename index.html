@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style lang="">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+        }
+
+        .swiper-container {
+            margin: 66px auto;
+            position: relative;
+            width: 720px;
+            height: 288px;
+        }
+
+        .swiper-wrapper {
+            width: 100%;
+            height: auto;
+        }
+
+        .swiper-slide {
+            position: absolute;
+            z-index: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .swiper-slide img {
+            display: none;
+            opacity: 0;
+            width: 100%;
+        }
+
+        .swiper-pagination {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            z-index: 8;
+            transform: translateX(-50%);
+        }
+
+        .swiper-pagination span {
+            display: inline-block;
+            width: 10px;
+            padding-top: 10px;
+            border-radius: 50%;
+            background: #fff;
+            cursor: pointer;
+        }
+
+        .swiper-pagination span:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        .swiper-button {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            z-index: 88
+        }
+
+        .swiper-button span {
+            display: block;
+            width: 24px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: rgba(0, 0, 0, .2);
+            font-size: 20px;
+            color: hsla(0, 0%, 100%, .4);
+            cursor: pointer;
+        }
+
+        .swiper-pagination span.active {
+            background-color: #eb3436;
+        }
+
+        .swiper-button span:first-child{
+            float: left;
+        }
+
+        .swiper-button span:hover {
+            background: rgba(0, 0, 0, .5);
+            color: #fff;
+        }
+
+        .swiper-button span:last-child {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="javascript:;">
+                    <img src="images/pic1.jpg" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="javascript:;">
+                    <img src="images/pic2.jpg" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="javascript:;">
+                    <img src="images/pic3.jpg" alt="">
+                </a>
+            </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button">
+            <span><</span>
+            <span>></span>
+        </div>
+    </div>
+    
+    <script src="swiper.js"></script>
+    <script>
+        let s1 = new Swiper(".swiper-container")
+    </script>
+</body>
+
+</html>
